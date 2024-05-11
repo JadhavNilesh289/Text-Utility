@@ -47,7 +47,6 @@ function Navbar({ title = "Set Title Here" }, ...props) {
               <Link to="/about">About</Link>
             </li>
           </ul>
-            <button className="border" onClick={props.toggleStyle} type="button">{props.btntext}</button>
         </div>
       </div>
     </>

@@ -38,7 +38,7 @@ export default function TextForm(props) {
 
   return (
     <div>
-      <div className="flex flex-col items-center mt-8">
+      <div className="flex flex-col items-center mt-20">
         <h1 className="font-semibold text-xl mb-3">{props.headings}</h1>
 
         <textarea
@@ -84,7 +84,7 @@ export default function TextForm(props) {
       <div className="mt-10 md:ml-96">
         <h2 className="font-semibold text-xl my-2">Text Summary</h2>
         <p>
-          {text.split(" ").length} Words and {text.length} Characters
+          {text.split(" ").filter((element) =>{return element.length!==0}).length} Words and {text.length} Characters
         </p>
       </div>
     </div>

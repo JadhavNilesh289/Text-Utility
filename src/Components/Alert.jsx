@@ -2,7 +2,6 @@ import React from "react";
 
 function Alert(props) {
   return (
-    <div>
       <div class="text-center py-4 lg:px-4">
         <div
           class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
@@ -13,7 +12,6 @@ function Alert(props) {
           </span>
         </div>
       </div>
-    </div>
   );
 }
 
