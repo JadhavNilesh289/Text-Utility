@@ -1,28 +1,7 @@
 import React, { useState } from "react";
 
 export default function TextForm(props) {
-  const [myStyle, setStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
-
-  const [btntext, setBtnText] = useState("Enable Dark Mode");
-
-  const toggleStyle = () => {
-    if (myStyle.color === "black") {
-      setStyle({
-        color: "#909FB4",
-        backgroundColor: "#1E293B",
-      });
-      setBtnText("Enable Light Mode");
-    } else {
-      setStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtnText("Enable Dark Mode");
-    }
-  };
+  
 
   const [text, setText] = useState("Enter text here");
 
@@ -58,7 +37,7 @@ export default function TextForm(props) {
   };
 
   return (
-    <div style={myStyle}>
+    <div>
       <div className="flex flex-col items-center mt-8">
         <h1 className="font-semibold text-xl mb-3">{props.headings}</h1>
 
@@ -107,12 +86,6 @@ export default function TextForm(props) {
         <p>
           {text.split(" ").length} Words and {text.length} Characters
         </p>
-      </div>
-
-      <div>
-        <button className="border m-2" onClick={toggleStyle} type="button">
-          {btntext}
-        </button>
       </div>
     </div>
   );

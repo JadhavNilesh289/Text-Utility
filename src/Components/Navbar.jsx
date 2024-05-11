@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useNavigate, Link } from "react-router-dom";
 
-function Navbar({ title = "Set Title Here" }) {
+function Navbar({ title = "Set Title Here" }, ...props) {
   const navigate = useNavigate();
 
   const gotoHome = () => {
@@ -35,7 +35,7 @@ function Navbar({ title = "Set Title Here" }) {
             </p>
           </div>
         </div>
-        <div>
+        <div className="flex">
           <ul className="flex gap-12 text-white font-semibold text-[20px]">
             <li onClick={gotoTeam}>
               <Link to="/team">Team</Link>
@@ -47,6 +47,7 @@ function Navbar({ title = "Set Title Here" }) {
               <Link to="/about">About</Link>
             </li>
           </ul>
+            <button className="border" onClick={props.toggleStyle} type="button">{props.btntext}</button>
         </div>
       </div>
     </>
